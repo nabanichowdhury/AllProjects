@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="clickingMethod"></p>
+    <input type="text" name="" id="input-name">
+    <button id="update-name">Update</button>
+    <button id="click">JUST CLICK</button>
+    <button id="second-click">Keep clicking</button>
+
+
+    <script>
+        const clicking = document.getElementById("click");
+        clicking.addEventListener("click",function(){
+            const p=document.getElementById("clickingMethod");
+            p.innerText="Nabani Chowdhury"
+        })
+
+        document.getElementById('second-click').addEventListener("click",function(){
+            const p=document.getElementById("clickingMethod");
+            p.innerText="Welcome to my event"
+
+        })
+
+        document.getElementById('update-name').addEventListener("click",function(){
+            const inputName = document.getElementById('input-name');
+            console.log(inputName.value);
+            const p=document.getElementById("clickingMethod");
+            p.innerText=inputName.value;
+            inputName.value="";
+
+
+        })
+
+
+
+    </script>
+</body>
+</html>

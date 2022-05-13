@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event niye clickbaji </h1>
+    <button onclick="document.body.style.backgroundColor='green'">Click me:Green</button>
+    <button onclick="makeRed()">Click ME:Red</button>
+    <button id="makeBlueButton">Click Me:Blue</button>
+    <button id="makeYellowButton">Click Me :Yellow</button>
+    <button id="makeGold">Click ME :GoldenRod</button>
+    <button id="makeHotPink">Click Me :hotpink</button>
+    <button id="makeLightBlue">Click Me :LighBlue</button>
+
+    <!-- <script src="js/event.js"></script> -->
+
+    <script>
+        function makeRed(){
+    document.body.style.backgroundColor="red"
+}
+
+const blueButton=document.getElementById('makeBlueButton');
+console.log(blueButton)
+  // just set the name of a function
+  blueButton.onclick=makeblue;
+  function makeblue(){
+      document.body.style.backgroundColor="blue"
+  }
+  const yellowButton=document.getElementById("makeYellowButton");
+console.log(yellowButton);
+// anonymus function 
+yellowButton.onclick= function (){
+    document.body.style.backgroundColor="yellow";
+}
+const goldenButton=document.getElementById("makeGold");
+console.log(goldenButton);
+goldenButton.addEventListener("click",makegold);
+
+
+function makegold(){
+    document.body.style.backgroundColor='gold';
+}
+
+
+const hotPink=document.getElementById("makeHotPink");
+hotPink.addEventListener("click",function makepink(){
+    document.body.style.background='hotpink';
+})
+
+// light blue 
+// direct shortcut
+
+document.getElementById("makeLightBlue").addEventListener("click",function(){
+    document.body.style.backgroundColor="lightblue";
+})
+        
+        
+    </script>
+    
+</body>
+</html>

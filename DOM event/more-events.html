@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <h2>More Events</h2>
+   <section>
+    <h3 id="secret">Very very secret information</h3>
+    <input type="text" placeholder="Please type delete" id="type-delete">
+    <button id="delete-button" disabled>Delete</button>
+   </section>
+
+   <script>
+        const clickDelete=document.getElementById("delete-button");
+        clickDelete.addEventListener("click",function(){
+             document.getElementById("secret").style.display="none";})
+            //  focus 
+             const inputDelete=document.getElementById("type-delete");
+        inputDelete.addEventListener("focus",function(){
+             document.body.style.backgroundColor="lightcoral";})
+            // blur 
+             
+        inputDelete.addEventListener("blur",function(){
+             document.body.style.backgroundColor="white";})
+            //  keydown 
+         inputDelete.addEventListener("keyup",function(event){
+              if(event.target.value=='delete'){
+                  document.getElementById('delete-button').removeAttribute('disabled')
+              }
+              else{
+                document.getElementById('delete-button').setAttribute('disabled',true)
+              }
+
+            })
+            //  change 
+        inputDelete.addEventListener("change",function(){
+             console.log(inputDelete.value)})
+        
+
+   </script>
+    
+</body>
+</html>

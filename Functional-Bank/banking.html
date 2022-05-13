@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header><h1 class="text-5xl text-center mt-16">Welcome to <span class="font-semibold text-cyan-700">baaper bank!!!!</span></h1></header>
+    <main>
+       <section class="my-5">
+        <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white ">
+            <div class="bg-orange-400 p-8 ">
+                <h2 class="text-4xl" >Diposite</h2>
+                <h3 class="text-3xl" >$$ <span id="show-deposite">00</span></h3>
+
+            </div>
+            <div class="bg-yellow-400 p-8 	">
+                <h2 class="text-4xl" >Withdraw</h2>
+                <h3 class="text-3xl " >$$
+                   <span id="show-withdraw">00</span> </h3>
+
+            </div>
+            <div class="bg-green-400 p-8 	">
+                <h2 class="text-4xl " >Net Balance</h2>
+                <h3 class="text-3xl" >$$ <span id="total-balance" >1200</span> </h3>
+
+            </div>
+            
+        </div>
+       </section>
+       <!-- diposite and Withdraw  -->
+         <section>
+             <div class="grid grid-cols-2  w-3/4 mx-auto  gap-4 ">
+                <div class="bg-red-100 rounded-md">
+                    <h3 class="text-2xl mb-5 px-4 pt-5">Please Deposite</h3>
+                    <input class="block m-5 w-3/4 border-2 rounded-md"type="text" name="" id="user-deposite" placeholder="$Deposite money here">
+                   
+                    <button id="deposite-button"class="bg-pink-600 mx-5 mb-5 p-2 px-4 text-gray-50	 rounded-md">Deposite</button>
+                </div>
+                <div class="bg-fuchsia-200 rounded-md">
+                    <h3 class="text-2xl mb-5 px-4 pt-5">Please Withdraw</h3>
+                    <input class="block m-5 w-3/4 border-2 rounded-md"type="text" name="" id="user-withdraw" placeholder="$Withdraw money here">
+                   
+                    <button id="withdraw-button"class="bg-fuchsia-600 mx-5 mb-5 p-2 px-4 text-gray-50	 rounded-md">Withdraw</button>
+                </div>
+             </div>
+         </section>
+
+    </main>
+    <script src="js/banking.js"></script>
+</body>
+</html>
